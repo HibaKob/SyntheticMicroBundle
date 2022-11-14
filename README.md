@@ -43,7 +43,7 @@ The output of the code as shown in `Example` folder should be as follows:
 |        |___ Masks
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
-|        |___ FEA_Results_*
+|        |___ FEA_Results_$\color{green}{*}$
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
 |                |___Frames_*
