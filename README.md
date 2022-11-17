@@ -36,6 +36,7 @@ Once the input data structuring described above is followed, generating syntheti
 
 The output of the code as shown in `Example` folder should be as follows:
 
+\*this text is surrounded by literal asterisks\*
 ```bash
 |___ Example
 |        |___ Movies
@@ -46,7 +47,7 @@ The output of the code as shown in `Example` folder should be as follows:
 |        |___ FEA_Results_*
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
-|                |___Frames_*
+|                |___Frame _ *   
 |                        |___"Frame%04.tif"
 |        |___ Textures
 |                |___"*_Frame%04_TissueTexture.png"
