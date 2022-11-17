@@ -46,7 +46,7 @@ The output of the code as shown in `Example` folder should be as follows:
 |        |___ FEA_Results_*
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
-|                |___Frames_'\*'
+|                |___Frames_\*
 |                        |___"Frame%04.tif"
 |        |___ Textures
 |                |___"*_Frame%04_TissueTexture.png"
