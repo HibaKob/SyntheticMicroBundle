@@ -17,7 +17,7 @@ The code expects three input folders. The naming of the folders is not important
 
 2. `Masks` folder: This folder contains binary masks corresponding to each of the real movies. Also, masks should have a `.tif` extension. Synthetic masks outputted by `GenerateSyntheticTextures.py` are also saved to this folder as `Synthetic_Mask_*.tif` (e.g. 'Synthetic_Mask_D1T4_Before.tif')
 
-3. `FEA_Results_*`folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as a text file for each step of the timeseries Finite Element simulation.
+3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as a text file for each step of the timeseries Finite Element simulation.
 
 Initially, the `Example` folder should have the following structure:
 
@@ -43,7 +43,7 @@ The output of the code as shown in `Example` folder should be as follows:
 |        |___ Masks
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
-|        |___ FEA_Results_$\color{green}{*}$
+|        |___ FEA_Results_{*}
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
 |                |___Frames_*
