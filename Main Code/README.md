@@ -1,8 +1,7 @@
 # SyntheticMicroBundle
 This repository contains the code for generating synthetic data of beating microbundles based on experimentally-informed Finite Element simulations, as implemented in the paper [`TITLE`](addlink).
 
-![Pipeline](Figures/Pipeline_SyntheticData_RealFrame.png)
-
+![Pipeline](../Figures/Pipeline_SyntheticData_RealFrame.png)
 ## In this Repository
 The  `Main Code` folder contains the following files:
 * [`GenerateSyntheticTextures.py`](GenerateSyntheticTextures.py) -- This code generates synthetic regions of beating microbundles based on displacement results obtained via Finite Element Simulations given a real frame image of a microbundle, a mask of the tissue region of the frame, and FEA displacement results at different points within the tissue domain. 
