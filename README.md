@@ -4,7 +4,7 @@ This repository contains the code for generating synthetic data of beating micro
 ![Pipeline](Figures/Pipeline_SyntheticData_RealFrame.png)
 
 ## In this Repository
-This repository contains the following files:
+The  `Main Code` folder contains the following files:
 * [`GenerateSyntheticTextures.py`](GenerateSyntheticTextures.py) -- This code generates synthetic regions of beating microbundles based on displacement results obtained via Finite Element Simulations given a real frame image of a microbundle, a mask of the tissue region of the frame, and FEA displacement results at different points within the tissue domain. 
 * [`Add_Noise.py`](Add_Noise.py) -- This code adds a Perlin noise to the generated synthetic microbundle frames given a mask of the texture region (region to add noise), number of octaves, and magnitude ratio relative to the maximum intensity value within the mask region.
 * [`fcns.py`](fcns.py) --  This file contains all the user-defined functions needed to run the codes.
@@ -17,7 +17,7 @@ The code expects three input folders. The naming of the folders is not important
 
 2. `Masks` folder: This folder contains binary masks corresponding to each of the real movies. Also, masks should have a `.tif` extension. Synthetic masks outputted by `GenerateSyntheticTextures.py` are also saved to this folder as `Synthetic_Mask_*.tif` (e.g. 'Synthetic_Mask_D1T4_Before.tif')
 
-3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as a text file for each step of the timeseries Finite Element simulation.
+3. `FEA_Results_``*`folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as a text file for each step of the timeseries Finite Element simulation.
 
 Initially, the `Example` folder should have the following structure:
 
