@@ -1,5 +1,5 @@
 # SyntheticMicroBundle: Warp Code
-This folder contains the files to generate textured synthetic movie frames of beating microbundles based on FEA results. All files were tested in `Python 3.9.13`.
+This folder contains the files to generate synthetic movie frames of beating microbundles based on FEA results. All files were tested in `Python 3.9.13`.
 ## In this Folder
 The  `Warp_code` folder contains the following files:
 * [`GenerateSyntheticTextures.py`](GenerateSyntheticTextures.py) -- This code generates synthetic regions of beating microbundles based on displacement results obtained via Finite Element Simulations given a real frame image of a microbundle, a mask of the tissue region of the frame, and FEA displacement results at different points within the tissue domain. 
