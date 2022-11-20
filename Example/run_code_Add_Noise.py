@@ -16,7 +16,7 @@ frame_tag = 'Frame0000'
 
 # Load synthetic frames
 synthetic_data_fldr = seq_tag + "_" + frame_tag + '_SyntheticTextures/'
-synthetic_data = 'Homog_MaxAct0.1_VFA_G16x16_Square/'
+synthetic_data = 'Homog_MaxAct0.1_VFA_G16x16/'
 synthetic_fr_fldr = synthetic_data_fldr + synthetic_data
 synthetic_all_frames = [file for file in os.listdir(synthetic_fr_fldr) if file.endswith('.tif')]
 synthetic_all_frames = sorted(synthetic_all_frames, key=lambda f: int(re.sub('\D', '', f)))
@@ -59,7 +59,7 @@ for mag_r in ratio_lst:
         all_noisy_frames = []
         
         # Create folder to save noisy frames to folder
-        noisy_frame_folder = os.path.join('Noisy_' + seq_tag + "_" + frame_tag + '_SyntheticTextures/','Homog_MaxAct0.1_VFA_G16x16_Square_MagR{0}_Oct{1}/'.format(mag_r,octv),"")
+        noisy_frame_folder = os.path.join('Noisy_' + seq_tag + "_" + frame_tag + '_SyntheticTextures/','Homog_MaxAct0.1_VFA_G16x16_MagR{0}_Oct{1}/'.format(mag_r,octv),"")
         if not os.path.exists(noisy_frame_folder):
             os.makedirs(noisy_frame_folder)
 

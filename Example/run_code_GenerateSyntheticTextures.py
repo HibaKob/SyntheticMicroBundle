@@ -157,7 +157,7 @@ for dd in range(len(grid_size)):
     all_grid_size_lst_str.append(grid_size_str)
 
     # Create folder to save warped frames with black border
-    warped_frame_folder = os.path.join(seq_tag + "_" + frame_tag + '_SyntheticTextures/', 'Homog_MaxAct0.1_VFA_G{0}_Square/'.format(grid_size_str), "") 
+    warped_frame_folder = os.path.join(seq_tag + "_" + frame_tag + '_SyntheticTextures/', 'Homog_MaxAct0.1_VFA_G{0}/'.format(grid_size_str), "") 
     
     if not os.path.exists(warped_frame_folder):
         os.makedirs(warped_frame_folder)
