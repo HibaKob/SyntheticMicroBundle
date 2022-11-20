@@ -11,7 +11,7 @@ import re
 
 
 # Specify video name and frame tags
-seq_tag = 'D1T4_Before'
+seq_tag = 'D1T3_Before'
 frame_tag = 'Frame0000'
 
 # Load synthetic frames

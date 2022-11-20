@@ -10,7 +10,9 @@ The code expects three input folders. The naming of the folders is not important
 
 3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as text files for each step of the timeseries Finite Element simulation.
 
-Initially, the `Example` folder should have the following structure:
+4. `Tissue_Slice_Coordinates.txt` file: This text file contains the contour coordinates (X,Y) of the microbundle used to generate the mesh for the Finite Element simulations.
+
+In addition to the `run_code_*` python files, the `Example` folder should have the following structure initially:
 
 ```bash
 |___ Example
@@ -20,6 +22,7 @@ Initially, the `Example` folder should have the following structure:
 |                |___"*_Mask.tif"
 |        |___ FEA_Results_*
 |                |___"disp_all_Step%i.txt"
+|        |___ "Tissue_Slice_Coordinates.txt"
 ```
 
 ### Running the code (Output)

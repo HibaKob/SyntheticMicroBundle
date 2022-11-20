@@ -18,7 +18,7 @@ import re
 # Path to .tif movie file
 seq_fldr = 'Movies/'
 # Specify video name tag
-seq_tag = 'D1T4_Before'
+seq_tag = 'D2T5_After'
 
 # Convert movie to individual frames
 imgs_fldr = fcns.tiff_to_imgs(seq_fldr,seq_tag)
