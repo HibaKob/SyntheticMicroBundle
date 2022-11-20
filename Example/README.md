@@ -38,15 +38,17 @@ The output of the code as shown in this folder should be as follows:
 |        |___ Masks
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
-|        |___ FEA_Results_*
+|        |___ FEA_Results_**
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
-|                |___Frame_*   
+|                |___Frames_*   
 |                        |___"Frame%04.tif"
 |        |___ Textures
 |                |___"*_Frame%04_TissueTexture.png"
 |        |___ *_Frame%04_SyntheticTextures
-|                |___ "Warped_Frame%04.tif"
+|                |___ **_G%ix%i_Square
+                         |___ "Warped_Frame%04.tif"
+                         |___ "Synthetic_Frames_G%ix%i.gif"
 |        |___ Noisy_*_Frame%04_SyntheticTextures
 |                |___ G%ix%i_MagR%f_Oct%f
 |                        |___ "Noisy_Frame%04.tif"
