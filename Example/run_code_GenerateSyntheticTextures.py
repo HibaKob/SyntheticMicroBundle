@@ -18,7 +18,7 @@ import re
 # Path to .tif movie file
 seq_fldr = 'Movies/'
 # Specify video name tag
-seq_tag = 'D2T5_After'
+seq_tag = 'D1T4_Before'
 
 # Convert movie to individual frames
 imgs_fldr = fcns.tiff_to_imgs(seq_fldr,seq_tag)
@@ -117,7 +117,7 @@ middle_region = np.zeros([image_height, image_width], dtype=np.uint16)
 middle_region[strt_crop_y:end_crop_y,strt_crop_x:end_crop_x] = texture_image[strt_crop_y:end_crop_y,strt_crop_x:end_crop_x]
 
 # List of grid sizes
-grid_size = [[2,2],[3,3],[4,4],[5,5],[6,6],[7,7],[8,8],[9,9],[10,10],[11,11],[12,12],[13,13],[14,14],[15,15],[16,16]]
+grid_size = [[16,16]]
 
 # Overlap tolerance
 tol = 2
