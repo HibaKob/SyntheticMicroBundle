@@ -66,15 +66,6 @@ for mag_r in ratio_lst:
         img_files = glob.glob(noisy_frame_folder + '/*.tif')
         for ff in img_files:
             os.remove(ff)
-
-        # Create folder to save cropped noisy frames to folder
-        cropped_noisy_frame_folder = os.path.join('Noisy_' + seq_tag + "_" + frame_tag + '_SyntheticTextures/','Cropped_Homog_MaxAct0.1_VFA_G16x16_Square_MagR{0}_Oct{1}/'.format(mag_r,octv),"")
-        if not os.path.exists(cropped_noisy_frame_folder):
-            os.makedirs(cropped_noisy_frame_folder)
-
-        img_files = glob.glob(cropped_noisy_frame_folder + '/*.tif')
-        for ff in img_files:
-            os.remove(ff)
         
         # Initialize seed (for reproducibility)
         seed = 200
@@ -98,19 +89,11 @@ for mag_r in ratio_lst:
             seed +=5
 
             imageio.imwrite(noisy_frame_folder + 'Noisy_Frame%04d.tif'%(fp),noisy_frame)
-            imageio.imwrite(cropped_noisy_frame_folder + 'Cropped_Noisy_Frame%04d.tif'%(fp),noisy_frame_cropped)
         
         # Save noisy synthetic texture as gif
         video_name = 'Noisy_Synthetic_Perlin_MagR{0}_Oct{1}.gif'.format(mag_r,octv)    
         writer = imageio.get_writer(noisy_frame_folder + video_name, fps=10)
         for noisy_img in all_noisy_frames:
             writer.append_data(noisy_img)
-        writer.close()
-    
-        # Save crpped noisy synthetic texture as gif
-        video_name = 'Cropped_Noisy_Synthetic_Perlin_MagR{0}_Oct{1}.gif'.format(mag_r,octv)    
-        writer = imageio.get_writer(cropped_noisy_frame_folder + video_name, fps=10)
-        for noisy_img in all_noisy_frames:
-            writer.append_data(noisy_img[strt_crop_y_pad:end_crop_y_pad,strt_crop_x_pad:end_crop_x_pad])
         writer.close()
         
