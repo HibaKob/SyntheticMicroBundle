@@ -48,9 +48,9 @@ all_raw_frames = [io.imread(synthetic_fr_fldr + synthetic_all_frames[ii]) for ii
 all_frames_uint8 = fcns.proces_uint16_uint8(all_raw_frames, mask)
 
 # Define list of magnitude ratios and octaves for Perlin noise
-ratio_lst = np.linspace(1,10,10)
+ratio_lst = np.array([9])
 ratio_lst = ratio_lst*0.01
-octv_lst = np.linspace(4,80,20)
+octv_lst = [36]
 
 # Add Perlin noise 
 for mag_r in ratio_lst:
