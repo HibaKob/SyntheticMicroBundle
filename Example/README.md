@@ -8,7 +8,7 @@ The code expects three input folders. The naming of the folders is not important
 
 2. `Masks` folder: This folder contains binary masks corresponding to each of the real movies. Also, masks should have a `.tif` extension. Synthetic masks outputted by `GenerateSyntheticTextures.py` are also saved to this folder as `Synthetic_Mask_*.tif` (e.g. 'Synthetic_Mask_D1T4_Before.tif')
 
-3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as text files for each step of the timeseries Finite Element simulation.
+3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as text files for each step of the timeseries Finite Element simulation. These files are automatically generated when `FEA_Synthetic_Microbundle.py` file in `FEA_code` folder is run.
 
 4. `Tissue_Slice_Coordinates.txt` file: This text file contains the contour coordinates (X,Y) of the microbundle used to generate the mesh for the Finite Element simulations.
 
@@ -26,9 +26,7 @@ In addition to the `run_code_*` python files, the `Example` folder should have t
 ```
 
 ### Running the code (Output)
-Once the input data structuring described above is followed, generating synthetic data should be straightforward. Specifically, the following folders and files are outputted:
-
-The output of the code as shown in this folder should be as follows:
+Once the input data structuring described above is followed, generating synthetic data should be straightforward. Specifically, the following folders and files are outputted with the structure detailed below:
 
 \*this text is surrounded by literal asterisks\*
 ```bash
