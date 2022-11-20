@@ -48,7 +48,7 @@ Once the input data structuring described above is followed, generating syntheti
                          |___ "Warped_Frame%04.tif"
                          |___ "Synthetic_Frames_G%ix%i.gif"
 |        |___ Noisy_*_Frame%04_SyntheticTextures
-|                |___ G%ix%i_MagR%f_Oct%f
+|                |___ **_G%ix%i_MagR%f_Oct%f
 |                        |___ "Noisy_Frame%04.tif"
 |                        |___ "Noisy_Synthetic_Perlin_MagR%f_Oct%f.gif"
 ```
