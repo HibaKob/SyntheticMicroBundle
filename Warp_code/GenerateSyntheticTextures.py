@@ -125,15 +125,6 @@ tol = 2
 # Number of frames in FEA simualtion
 nmbr_steps = len(disp_all_files)
 
-# Create folder to save results
-path_save_results = 'Convergence_Results_' + seq_tag + "_" + frame_tag + '_SyntheticData_SquareMask/'
-
-if not os.path.exists(path_save_results):
-    os.mkdir(path_save_results)
-res_files = glob.glob(path_save_results + '/*.txt')
-for ff in res_files:
-    os.remove(ff) 
-
 # Create empty lists to collect results from all grid sizes
 all_grid_size_lst_str = []
 all_mean_Error_F_allFrames = []
@@ -164,16 +155,6 @@ for dd in range(len(grid_size)):
     
     grid_size_str = ('{0}x{1}').format(nmbr_div_y,nmbr_div_x)
     all_grid_size_lst_str.append(grid_size_str)
-    
-    # Create folder to save warped cropped frames 
-    warped_cropped_frame_folder = os.path.join(seq_tag + "_" + frame_tag + '_SyntheticTextures/', 'Cropped_Homog_MaxAct0.1_VFA_G{0}_Square/'.format(grid_size_str), "")
-    
-    if not os.path.exists(warped_cropped_frame_folder):
-        os.makedirs(warped_cropped_frame_folder)
-        
-    warped_cf = glob.glob(warped_cropped_frame_folder + '/*.tif')
-    for wcf in warped_cf:
-        os.remove(wcf)
 
     # Create folder to save warped frames with black border
     warped_frame_folder = os.path.join(seq_tag + "_" + frame_tag + '_SyntheticTextures/', 'Homog_MaxAct0.1_VFA_G{0}_Square/'.format(grid_size_str), "") 
@@ -274,8 +255,7 @@ for dd in range(len(grid_size)):
     
         # Save warped frames as uint16 images (all frames)
         imageio.imwrite(warped_frame_folder + 'Warped_Frame%04d.tif'%(nn),whole_warped_frame)
-        imageio.imwrite(warped_cropped_frame_folder + 'Cropped_Warped_Frame%04d.tif'%(nn),whole_warped_frame[strt_crop_y_pad:end_crop_y_pad,strt_crop_x_pad:end_crop_x_pad])
-    
+
     run_time = time.perf_counter() - start_time_generate_syn_data  
     
     mean_Error_F_allSub_allFrames = np.mean(grid_mean_Error_F,axis=0)
@@ -287,23 +267,12 @@ for dd in range(len(grid_size)):
     peak_Error_F_allSub_allFrames = np.max(grid_peak_Error_F,axis=0)
     all_peak_Error_F_allFrames.append(peak_Error_F_allSub_allFrames)
     
-    # Save error results to text file    
-    header = 'Time to Run , Peak_Mean_F_subdomain_Error , Peak_F_subdomain_Error'
-    results = np.array([run_time, peak_mean_Error_F_allSub_allFrames, peak_Error_F_allSub_allFrames])
-    np.savetxt(path_save_results + 'Results_G{0}_ErrorF_SquareMask.txt'.format(grid_size_str), [results], delimiter=',', fmt='%s', header=header)
-    
     # Save synthetic data as gif (all frames)
     video_name = warped_frame_folder + 'Synthetic_Frames_G{0}.gif'.format(grid_size_str)
     writer = imageio.get_writer(video_name, fps=10)
     for image in grid_syn_frames:
         writer.append_data(image)
     writer.close()
-    
-    cropped_video_name = warped_cropped_frame_folder + 'Cropped_Synthetic_Frames_G{0}.gif'.format(grid_size_str)
-    write_cr = imageio.get_writer(cropped_video_name, fps=10)
-    for image_cr in grid_syn_frames:
-        write_cr.append_data(image_cr[strt_crop_y_pad:end_crop_y_pad,strt_crop_x_pad:end_crop_x_pad])
-    write_cr.close()
 
 # =============================================================================
 # # Plot Errors
