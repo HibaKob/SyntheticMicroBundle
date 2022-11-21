@@ -28,7 +28,6 @@ In addition to the `run_code_*` python files, the `Example` folder should have t
 ### Running the code (Output)
 Once the input data structuring described above is followed, generating synthetic data should be straightforward. Specifically, the following folders and files are outputted according to the structure detailed below:
 
-\*this text is surrounded by literal asterisks\*
 ```bash
 |___ Example
 |        |___ Movies
@@ -36,7 +35,7 @@ Once the input data structuring described above is followed, generating syntheti
 |        |___ Masks
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
-|        |___ FEA_Results_\**
+|        |___ FEA_Results_**
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
 |                |___Frames_*   
@@ -46,11 +45,12 @@ Once the input data structuring described above is followed, generating syntheti
 |        |___ *_Frame%04_SyntheticTextures
 |                |___ **_G%ix%i
 |                         |___ "Warped_Frame%04.tif"
-|                         |___ "Synthetic_Frames_G%ix%i.gif"
 |        |___ Noisy_*_Frame%04_SyntheticTextures
 |                |___ **_G%ix%i_MagR%f_Oct%f
 |                        |___ "Noisy_Frame%04.tif"
-|                        |___ "Noisy_Synthetic_Perlin_MagR%f_Oct%f.gif"
 ```
 
 ### Understanding the output files
+The output of the code mainly includes the synthetic frames of beating microbundles with and without added Perlin noise. The remaining output consists of crucial intermediate steps necessary to obtain the final product.
+
+1. 
