@@ -54,12 +54,12 @@ Once the input data structuring described above is followed, generating syntheti
 ### Understanding the output files
 The output of the code mainly includes the synthetic frames of beating microbundles with and without added Perlin noise. The remaining output consists of crucial intermediate steps necessary to obtain the final product.
 
-1. `Synthetic_Mask_*.tif`
+* `Synthetic_Mask_*.tif`
 
-2. `Frame%04.tif`
+* `Frame%04.tif`
 
-3. `*_Frame%04_TissueTexture.png`
+* `*_Frame%04_TissueTexture.png`
 
-4. `Warped_Frame%04.tif`
+* `Warped_Frame%04.tif`
 
-5. `Noisy_Frame%04.tif`
+* `Noisy_Frame%04.tif`
