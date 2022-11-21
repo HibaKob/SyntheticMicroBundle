@@ -29,14 +29,14 @@ In addition to the `run_code_*` python files, the `Example` folder should have t
 Once the input data structuring described above is followed, generating synthetic data should be straightforward. Specifically, the following folders and files are outputted according to the structure detailed below:
 
 \*this text is surrounded by literal asterisks\*
-```bsh
+```bash
 |___ Example
 |        |___ Movies
 |                |___"*.tif"
 |        |___ Masks
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
-|        |___ FEA_Results_**
+|        |___ FEA_Results_#**
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
 |                |___Frames_*   
