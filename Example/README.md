@@ -10,7 +10,7 @@ The code expects three input folders. The naming of the folders is not important
 
 3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as text files for each step of the timeseries Finite Element (FE) simulation. These files are automatically generated when `FEA_Synthetic_Microbundle.py` file in `FEA_code` folder is run.
 
-    3a. Each `disp_all_Step#.txt` file is a 3xm array of the displacement results at the 'm' mesh cell centers in the X, Y, and Z directions respectively. 
+    3a. Each `disp_all_Step#.txt` file is a '3xm' array of the displacement results at the 'm' mesh cell centers in the X, Y, and Z directions respectively. 
 
 4. `Tissue_Slice_Coordinates.txt` file: This text file contains the contour coordinates (X,Y) of the microbundle used to generate the mesh for the Finite Element simulations.
 
@@ -56,12 +56,12 @@ Once the input data structuring described above is followed, generating syntheti
 ### Understanding the output files
 The output of the code mainly includes the synthetic frames of beating microbundles with and without added Perlin noise. The remaining output consists of crucial intermediate steps necessary to obtain the final product. Mainly, outputs are saved in `.tif` or `.png` formats for easier visualization.
 
-* `Synthetic_Mask_*.tif`: A binary mask of the region of interest for generating synthetic data. The size of this mask is equal to that of the original movie frames. Here, the size of the `.tif` image is 512x512. 
+* `Synthetic_Mask_*.tif`: A binary mask of the region of interest for generating synthetic data. The size of this mask is equal to that of the original movie frames. Here, the size of the `.tif` image is '512x512'. 
 
-* `Frame%04.tif`: The frames of the movie file saved individually. We note here that we preserve the size of the frames as well as data type (uint16 in this case). 
+* `Frame%04.tif`: The frames of the movie file saved individually. We note here that we preserve the size of the frames as well as data type ('uint16' in this case). 
 
 * `*_Frame%04_TissueTexture.png`: The microbundle texture isolated from "Frame%04" based on "*_Mask.tif" and saved with transparent background. 
 
-* `Warped_Frame%04.tif`: The region of interest isolated from the microbundle texture image using "Synthetic_Mask_*.tif" and deformed based on displacement results extracted from FE simulations. Each frame is a 512x512 uint16 image. 
+* `Warped_Frame%04.tif`: The region of interest isolated from the microbundle texture image using "Synthetic_Mask_*.tif" and deformed based on displacement results extracted from FE simulations. Each frame is a '512x512' 'uint16' image. 
 
-* `Noisy_Frame%04.tif`: The synthetic frames with Perlin noise added to the textured region. Each frame is a 512x512 uint8 image. 
+* `Noisy_Frame%04.tif`: The synthetic frames with Perlin noise added to the textured region. Each frame is a '512x512' 'uint8' image. 
