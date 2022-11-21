@@ -36,7 +36,7 @@ Once the input data structuring described above is followed, generating syntheti
 |        |___ Masks
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
-|        |___ FEA_Results_'**'
+|        |___ FEA_Results_\**
 |                |___"disp_all_Step%i.txt"
 |        |___ Frames
 |                |___Frames_*   
