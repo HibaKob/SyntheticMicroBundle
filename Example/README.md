@@ -6,9 +6,9 @@ The code expects three input folders. The naming of the folders is not important
 
 1. `Movies` folder: This folder contains real movies of beating microbundles. Critically, movies should have a `.tif` extension.
 
-2. `Masks` folder: This folder contains binary masks corresponding to each of the real movies. Also, masks should have a `.tif` extension. Synthetic masks outputted by `GenerateSyntheticTextures.py` are also saved to this folder as `Synthetic_Mask_*.tif` (e.g. 'Synthetic_Mask_D1T4_Before.tif')
+2. `Masks` folder: This folder contains binary masks corresponding to each of the real movies. Also, masks should have a `.tif` extension. Synthetic masks outputted by `GenerateSyntheticTextures.py` are also saved to this folder as `Synthetic_Mask_*.tif` (e.g. "Synthetic_Mask_D1T4_Before.tif")
 
-3. `FEA_Results_*` folder (e.g. 'FEA_Results_Homog_MaxAct0.1_VFA'): This folder contains displacement results extracted at cell centers and saved as text files for each step of the timeseries Finite Element (FE) simulation. These files are automatically generated when `FEA_Synthetic_Microbundle.py` file in `FEA_code` folder is run.
+3. `FEA_Results_*` folder (e.g. "FEA_Results_Homog_MaxAct0.1_VFA"): This folder contains displacement results extracted at cell centers and saved as text files for each step of the timeseries Finite Element (FE) simulation. These files are automatically generated when `FEA_Synthetic_Microbundle.py` file in `FEA_code` folder is run.
 
     3a. Each `disp_all_Step#.txt` file is a '3xm' array of the displacement results at the 'm' mesh cell centers in the X, Y, and Z directions respectively. 
 
