@@ -266,13 +266,6 @@ for dd in range(len(grid_size)):
     
     peak_Error_F_allSub_allFrames = np.max(grid_peak_Error_F,axis=0)
     all_peak_Error_F_allFrames.append(peak_Error_F_allSub_allFrames)
-    
-    # Save synthetic data as gif (all frames)
-    video_name = warped_frame_folder + 'Synthetic_Frames_G{0}.gif'.format(grid_size_str)
-    writer = imageio.get_writer(video_name, fps=10)
-    for image in grid_syn_frames:
-        writer.append_data(image)
-    writer.close()
 
 # =============================================================================
 # # Plot Errors

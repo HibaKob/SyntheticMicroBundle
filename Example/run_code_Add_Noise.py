@@ -90,10 +90,3 @@ for mag_r in ratio_lst:
 
             imageio.imwrite(noisy_frame_folder + 'Noisy_Frame%04d.tif'%(fp),noisy_frame)
         
-        # Save noisy synthetic texture as gif
-        video_name = 'Noisy_Synthetic_Perlin_MagR{0}_Oct{1}.gif'.format(mag_r,octv)    
-        writer = imageio.get_writer(noisy_frame_folder + video_name, fps=10)
-        for noisy_img in all_noisy_frames:
-            writer.append_data(noisy_img)
-        writer.close()
-        
