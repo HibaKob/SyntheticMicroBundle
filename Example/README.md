@@ -37,6 +37,7 @@ Once the input data structuring described above is followed, generating syntheti
 |                |___"Synthetic_Mask_*.tif"
 |        |___ FEA_Results_**
 |                |___"disp_all_Step%i.txt"
+|        |___ "Tissue_Slice_Coordinates.txt"
 |        |___ Frames
 |                |___Frames_*   
 |                        |___"Frame%04.tif"
@@ -53,4 +54,12 @@ Once the input data structuring described above is followed, generating syntheti
 ### Understanding the output files
 The output of the code mainly includes the synthetic frames of beating microbundles with and without added Perlin noise. The remaining output consists of crucial intermediate steps necessary to obtain the final product.
 
-1. 
+1. `Synthetic_Mask_*.tif`
+
+2. `Frame%04.tif`
+
+3. `*_Frame%04_TissueTexture.png`
+
+4. `Warped_Frame%04.tif`
+
+5. `Noisy_Frame%04.tif`
