@@ -29,7 +29,7 @@ In addition to the `run_code_*` python files, the `Example` folder should have t
 Once the input data structuring described above is followed, generating synthetic data should be straightforward. Specifically, the following folders and files are outputted according to the structure detailed below:
 
 \*this text is surrounded by literal asterisks\*
-```env
+```tex
 |___ Example
 |        |___ Movies
 |                |___"*.tif"
