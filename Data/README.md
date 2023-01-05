@@ -1,6 +1,19 @@
 # SyntheticMicroBundle: Data
 
-The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element simulations. 
+The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element (FE) simulations. 
+
+
+We obtained 15 different microbundle textures from 5 real microbundle movies at 3 different frames: frame 0, a peak frame, and a valley frame. We then warped each of these 15 textures based on displacement results of 4 FE simulations: 
+
+1. Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in X direction (microbundle length)
+
+2. Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in Z direction (microbundle depth) 
+
+3. Heterogeneous activation where the active microbundle domain has a passive inlcusion in the middle with the fiber direction varying linearly in X direction (microbundle length)
+
+4. Heterogeneous activation where the active microbundle domain has a passive inlcusion in the middle with the fiber direction varying linearly in Z direction (microbundle depth) 
+
+The dataset can be accessed [`here`](https://drive.google.com/drive/folders/1bomqRqcy550tiXtsZ4Om9pYwl1iOco7e?usp=sharing). The table below summarizes the conditions for generating the 60 different synthetic microbundles.
 
 | File Name                | Texture Source | Frame     | FEA data                       |
 | -------------------------| -------------- | --------- | -----------------------------  |
