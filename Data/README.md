@@ -12,6 +12,8 @@ We obtained 15 different microbundle textures from 5 real microbundle movies at 
 
 4. [`FEA_Results_Heterog_MaxAct0.08_VFA_Z`](https://drive.google.com/drive/folders/1OhL6X4cpTSrMWCU8bARD9L-BdnRkvcqc?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inlcusion in the middle with the fiber direction varying linearly in Z direction (microbundle depth) 
 
+Each of these 4 folders contains 9 `.txt` result files, 3 for the mesh cell center positions in the X, Y, and Z directions, and 6 for the Green-Lagrange strain results $E_{xx}$, $E_{xy}$, $E_{xz}$, $E_{yy}$, $E_{yz}$, $E_{zz}$. Each of these text files contains a `number of points x number of steps` array. In other words, each column represents the results at the corresponding simulation step. We briefly note here that all FE simulations were run for 200 steps, simulating 8 complete microbundle beats. 
+
 The dataset can be accessed [`here`](https://drive.google.com/drive/folders/1bomqRqcy550tiXtsZ4Om9pYwl1iOco7e?usp=sharing). Each `.tif` file is approximatley 105 MB in size. The table below summarizes the conditions for generating the 60 different synthetic microbundles.
 
 | File Name                | Texture Source | Frame     | FEA data                       |
