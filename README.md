@@ -1,7 +1,7 @@
 # SyntheticMicroBundle
 This repository contains the code for generating synthetic data of beating microbundles based on experimentally-informed Finite Element simulations, as implemented in the paper [`TITLE`](addlink).
 
-![Pipeline](Figures/Pipeline_SyntheticData_RealFrame.png)
+![Pipeline](/Figures/Pipeline_SyntheticData_RealFrame.png)
 
 ## In this Repository
 This repository contains the following folders:
