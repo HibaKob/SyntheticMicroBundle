@@ -2,6 +2,8 @@
 
 The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element (FE) simulations. We make the entire dataset available [`here`](https://drive.google.com/drive/folders/1nlaBlfXcrup4wdoifaoX3D6US0cQ1Zi8?usp=sharing).
 
+![SyntheticExample](/Users/hibakobeissi/Desktop/CellMet_Fenics_Trials/SyntheticMicroBundle/Figures/Synthetic_Frames_G16x16.gif)
+
 We obtained 15 different microbundle textures from 5 real microbundle movies at 3 different frames: the first frame, a peak frame, and a valley frame. From these textures, we cropped `90x90` square domains centerd at each microbundle domain and then warped each of these 15 square textures based on displacement results of 4 FE simulations: 
 
 1. [`FEA_Results_Homog_MaxAct0.08_VFA_X`](https://drive.google.com/drive/folders/18WdScdh4GIq9YaA5ygX6wx20lC1ZgEqa?usp=sharing) -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in X direction (microbundle length)
