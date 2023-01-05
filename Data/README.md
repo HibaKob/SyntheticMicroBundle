@@ -4,6 +4,5 @@ The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files gene
 
 | File Name                | Texture Source  | Frame     | FEA data                       |
 | -------------------------| ----------------| --------  | -----------------------------  |
-| SyntheticTextures_1.tif  | Movie_1         | Frame0000 | Homogeneous Activation         |
-|                          |                 |           | Variable Fiber Direction in X: |
+| SyntheticTextures_1.tif  | Movie_1         | Frame0000 | ![Homogeneous Activation] ![Variable Fiber Direction in X] |
 
