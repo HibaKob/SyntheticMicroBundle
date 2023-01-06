@@ -10,7 +10,7 @@ The code expects three input folders. The naming of the folders is not important
 
 3. `FEA_Results_*` folder (e.g. "FEA_Results_Homog_MaxAct0.08_VFA_Z_Lite"): This folder contains X, Y, and Z displacement results extracted at mesh cell centers for each step of the timeseries Finite Element (FE) simulation and saved as text files. These files are automatically generated when `FEA_Synthetic_Microbundle.py` file in `FEA_code` folder is run.
 
-    3a. Each `pos_*.txt` file is a 'mxn' array of displacement results at the 'm' mesh cell centers for 'n' steps in the X, Y, and Z directions respectively. For the 'lite' version shared in this folder, we include 25 simulation steps only due to restrictions on file sizes. 
+    3a. Each `pos_*.txt` file is a 'mxn' array of displacement results at the 'm' mesh cell centers for 'n' steps in the X, Y, and Z directions respectively. For the 'lite' version shared in this folder, we include 25 simulation steps only of the X and Y displacements due to restrictions on file sizes. 
 
 4. `Tissue_Slice_Coordinates.txt` file: This text file contains the contour coordinates (X,Y) of the microbundle used to generate the mesh for the Finite Element simulations.
 
@@ -23,7 +23,9 @@ In addition to the `run_code_*` python files, the `Example` folder should have t
 |        |___ Masks
 |                |___"*_Mask.tif"
 |        |___ FEA_Results_**
-|                |___"disp_all_Step%i.txt"
+|                |___"pos_x.txt"
+|                |___"pos_y.txt"
+|                |___"pos_z.txt"
 |        |___ "Tissue_Slice_Coordinates.txt"
 ```
 
@@ -38,19 +40,19 @@ Once the input data structuring described above is followed, generating syntheti
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
 |        |___ FEA_Results_**
-|                |___"disp_all_Step%i.txt"
+|                |___"pos_x.txt"
+|                |___"pos_y.txt"
+|                |___"pos_z.txt"
 |        |___ "Tissue_Slice_Coordinates.txt"
 |        |___ Frames
 |                |___Frames_*   
 |                        |___"Frame%04.tif"
 |        |___ Textures
 |                |___"*_Frame%04_TissueTexture.png"
-|        |___ *_Frame%04_SyntheticTextures
-|                |___ **_G%ix%i
-|                         |___ "Warped_Frame%04.tif"
-|        |___ Noisy_*_Frame%04_SyntheticTextures
-|                |___ **_G%ix%i_MagR%f_Oct%f
-|                        |___ "Noisy_Frame%04.tif"
+|        |___ SyntheticData
+|                |___ "SyntheticTexture_%i.tif"
+|        |___ Noisy_SyntheticData
+|                |___ "SyntheticTexture_%i_MagR%f_Oct%i.tif"
 ```
 
 ### Understanding the output files
@@ -62,6 +64,6 @@ The output of the code mainly includes the synthetic frames of beating microbund
 
 * `*_Frame%04_TissueTexture.png`: The microbundle texture isolated from "Frame%04" based on "*_Mask.tif" and saved with transparent background. 
 
-* `Warped_Frame%04.tif`: The region of interest isolated from the microbundle texture image using "Synthetic_Mask_*.tif" and deformed based on displacement results extracted from FE simulations. Each frame is a '512x512' 'uint16' image. 
+* `SyntheticTexture_%i.tif`: The region of interest isolated from the microbundle texture image using "Synthetic_Mask_*.tif" and deformed based on displacement results extracted from FE simulations. Each file is a '200x512x512' 'uint16' array. 
 
-* `Noisy_Frame%04.tif`: The synthetic frames with Perlin noise added to the textured region. Each frame is a '512x512' 'uint8' image. 
+* `SyntheticTexture_%i_MagR%f_Oct%i.tif`: The synthetic frames with Perlin noise added to the textured region. Each frame is a '200x512x512' 'uint8' image. 
