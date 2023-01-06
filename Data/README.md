@@ -6,7 +6,7 @@ The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files gene
 <img alt="SyntheticExample" src="/Figures/Synthetic_Frames_G16x16.gif" width="50%" />
 </p>
 
-We obtained 15 different microbundle textures from 5 real microbundle movies at 3 different frames: the first frame, a peak frame, and a valley frame. From these textures, we cropped `90x90` square subdomains centerd at each microbundle domain. These regions are defined by the masks included in the folder[`synthetic_masks`](synthetic_masks). We then warped each of these 15 square textures based on displacement results of 4 FE simulations: 
+We obtained 15 different microbundle textures from 5 real microbundle movies at 3 different frames: the first frame, a peak frame, and a valley frame. From these textures, we cropped `90x90` square subdomains centerd at each microbundle domain. These regions are defined by the masks included in the folder [`synthetic_masks`](synthetic_masks). We then warped each of these 15 square textures based on displacement results of 4 FE simulations: 
 
 1. [`FEA_Results_Homog_MaxAct0.08_VFA_X`](https://drive.google.com/drive/folders/18WdScdh4GIq9YaA5ygX6wx20lC1ZgEqa?usp=sharing) -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in X direction (microbundle length)
 
