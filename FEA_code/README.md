@@ -5,4 +5,4 @@ The following files are provided:
 
 * [`FEA_Synthetic_Microbundle.py`](FEA_Synthetic_Microbundle.py) -- The Finite Element code file run in [`FEniCS 2019.1.0`](https://fenicsproject.org). More details about the implementation of the Finite Element model can be found in paper [`TITLE`](addlink).
 
-* [`MicroTug_RefDim_3D.xdmf`](MicroTug_RefDim_3D.xdmf) & [`MicroTug_RefDim_3D.h5`](`MicroTug_RefDim_3D.h5) -- The microbundle mesh generated in [`Gmsh 4.10.5`](https://gmsh.info) and saved in `.xdmf` format readable by FEniCS.
+* [`MicroTug_Geom_3D.xdmf`](MicroTug_Geom_3D.xdmf) & [`MicroTug_Geom_3D.h5`](`MicroTug_Geom_3D.h5) -- The microbundle mesh generated in [`Gmsh 4.10.5`](https://gmsh.info) and saved in `.xdmf` format readable by FEniCS.
