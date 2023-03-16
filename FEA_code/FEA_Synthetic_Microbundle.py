@@ -294,7 +294,7 @@ if rank == 0:
 
 # Define timeseries activation values
 max_act = 0.08
-#activation_values = timeseries_act(100,8,200,max_act)
+activation_values = timeseries_act(100,8,200,max_act)
 
 file_results = XDMFFile("Neo_Homog_MaxAct{0}_VFA_Z_test.xdmf".format(max_act))
 file_results.parameters["flush_output"] = True

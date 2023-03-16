@@ -12,9 +12,9 @@ We obtained 15 different microbundle textures from 5 real microbundle movies at 
 
 2. [`FEA_Results_Homog_MaxAct0.08_VFA_Z`](https://drive.google.com/drive/folders/1FobFgv8s0IjGSRAax_m2sTKDNFiD8kCI?usp=sharing) -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in Z direction (microbundle depth) 
 
-3. [`FEA_Results_Heterog_MaxAct0.08_VFA_X`](https://drive.google.com/drive/folders/1004hc0bogykYXMqm70VJd2l86QVufLD4?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inlcusion in the middle with the fiber direction varying linearly in X direction (microbundle length)
+3. [`FEA_Results_Heterog_MaxAct0.08_VFA_X`](https://drive.google.com/drive/folders/1004hc0bogykYXMqm70VJd2l86QVufLD4?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inclusion in the middle with the fiber direction varying linearly in X direction (microbundle length)
 
-4. [`FEA_Results_Heterog_MaxAct0.08_VFA_Z`](https://drive.google.com/drive/folders/1OhL6X4cpTSrMWCU8bARD9L-BdnRkvcqc?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inlcusion in the middle with the fiber direction varying linearly in Z direction (microbundle depth) 
+4. [`FEA_Results_Heterog_MaxAct0.08_VFA_Z`](https://drive.google.com/drive/folders/1OhL6X4cpTSrMWCU8bARD9L-BdnRkvcqc?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inclusion in the middle with the fiber direction varying linearly in Z direction (microbundle depth) 
 
 Each of these 4 folders contains 9 `.txt` result files, 3 for the mesh cell center positions in the X, Y, and Z directions, and 6 for the Green-Lagrange strain results $E_{xx}$, $E_{xy}$, $E_{xz}$, $E_{yy}$, $E_{yz}$, $E_{zz}$. Each of these text files contains a `number of points x number of steps` array. In other words, each column represents the results at the corresponding simulation step. We briefly note here that all FE simulations were run for 200 steps, simulating 8 complete microbundle beats. 
 

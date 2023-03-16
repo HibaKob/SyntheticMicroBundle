@@ -23,9 +23,8 @@ In addition to the `run_code_*` python files, the `Example` folder should have t
 |        |___ Masks
 |                |___"*_Mask.tif"
 |        |___ FEA_Results_**
-|                |___"pos_x.txt"
-|                |___"pos_y.txt"
-|                |___"pos_z.txt"
+|                |___"pos_x_lite.txt"
+|                |___"pos_y_lite.txt"
 |        |___ "Tissue_Slice_Coordinates.txt"
 ```
 
@@ -40,9 +39,8 @@ Once the input data structuring described above is followed, generating syntheti
 |                |___"*_Mask.tif"
 |                |___"Synthetic_Mask_*.tif"
 |        |___ FEA_Results_**
-|                |___"pos_x.txt"
-|                |___"pos_y.txt"
-|                |___"pos_z.txt"
+|                |___"pos_x_lite.txt"
+|                |___"pos_y_lite.txt"
 |        |___ "Tissue_Slice_Coordinates.txt"
 |        |___ Frames
 |                |___Frames_*   
