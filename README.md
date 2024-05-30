@@ -1,5 +1,5 @@
 # SyntheticMicroBundle
-This repository contains the code for generating synthetic data of beating microbundles based on experimentally-informed Finite Element simulations, as implemented in the paper [`TITLE`](addlink).
+This repository contains the code for generating synthetic data of beating microbundles based on experimentally-informed Finite Element simulations, as implemented in the paper [`MicroBundleCompute: Automated segmentation, tracking, and analysis of subdomain deformation in cardiac microbundles`](https://doi.org/10.1371/journal.pone.0298863).
 
 ![Pipeline](/Figures/Pipeline_SyntheticData_RealFrame.png)
 
