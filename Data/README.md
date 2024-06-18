@@ -1,6 +1,6 @@
 # SyntheticMicroBundle: Data
 
-The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element (FE) simulations. We make the entire dataset available on [`Zenodo`](10.5281/zenodo.12008741).
+The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element (FE) simulations. We make the entire dataset available on [`Zenodo`](https://doi.org/10.5281/zenodo.12008742).
 
 <p align = "center">
 <img alt="SyntheticExample" src="/Figures/Synthetic_Frames_G16x16.gif" width="50%" />
@@ -18,7 +18,7 @@ We obtained 15 different microbundle textures from 5 real microbundle movies at 
 
 Each of these 4 folders contains 9 `.txt` result files, 3 for the mesh cell center positions in the X, Y, and Z directions, and 6 for the Green-Lagrange strain results $E_{xx}$, $E_{xy}$, $E_{xz}$, $E_{yy}$, $E_{yz}$, $E_{zz}$. Each of these text files contains a `number of points x number of steps` array. In other words, each column represents the results at the corresponding simulation step. We briefly note here that all FE simulations were run for 200 steps, simulating 8 complete microbundle beats. 
 
-The dataset is stored in the `Synthetic_Data` folder [`here`](10.5281/zenodo.12008741). Each `.tif` file is approximatley 105 MB in size. The table below summarizes the conditions for generating the 60 different synthetic microbundles.
+The dataset is stored in the `Synthetic_Data` folder [`here`](https://doi.org/10.5281/zenodo.12008742). Each `.tif` file is approximatley 105 MB in size. The table below summarizes the conditions for generating the 60 different synthetic microbundles.
 
 | File Name                | Texture Source | Frame     | FEA data                       |
 | -------------------------| -------------- | --------- | -----------------------------  |
