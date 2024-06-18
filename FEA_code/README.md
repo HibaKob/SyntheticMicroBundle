@@ -3,7 +3,7 @@ This folder contains all the files needed to run Finite Element simulations and 
 
 The following files are provided: 
 
-* [`FEA_Synthetic_Microbundle.py`](FEA_Synthetic_Microbundle.py) -- The Finite Element code file run in [`FEniCS 2019.1.0`](https://fenicsproject.org). More details about the implementation of the Finite Element model can be found in paper [`TITLE`](addlink). We note here that we run this code in parallel. As an example, the following command with the FEniCS module loaded can be used:
+* [`FEA_Synthetic_Microbundle.py`](FEA_Synthetic_Microbundle.py) -- The Finite Element code file run in [`FEniCS 2019.1.0`](https://fenicsproject.org). More details about the implementation of the Finite Element model can be found in paper [`MicroBundleCompute: Automated segmentation, tracking, and analysis of subdomain deformation in cardiac microbundles`](https://doi.org/10.1371/journal.pone.0298863). We note here that we run this code in parallel. As an example, the following command with the FEniCS module loaded can be used:
     ```
     mpirun -np 2 python3 FEA_Synthetic_Microbundle.py
     ```
