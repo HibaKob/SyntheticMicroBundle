@@ -1,6 +1,6 @@
 # SyntheticMicroBundle: Data
 
-The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element (FE) simulations. We make the entire dataset available [`here`](https://drive.google.com/drive/folders/1nlaBlfXcrup4wdoifaoX3D6US0cQ1Zi8?usp=sharing).
+The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files generated based on textures extracted from real data and warped according to experimentally-informed Finite Element (FE) simulations. We make the entire dataset available on [`Zenodo`](10.5281/zenodo.12008741).
 
 <p align = "center">
 <img alt="SyntheticExample" src="/Figures/Synthetic_Frames_G16x16.gif" width="50%" />
@@ -8,17 +8,17 @@ The synthetic microbundle dataset consists of 60 `200x256x256` `.tif` files gene
 
 We obtained 15 different microbundle textures from 5 real microbundle movies at 3 different frames: the first frame, a peak frame, and a valley frame. From these textures, we cropped `90x90` square subdomains centerd at each microbundle domain. These regions are defined by the masks included in the folder [`synthetic_masks`](synthetic_masks). We then warped each of these 15 square textures based on displacement results of 4 FE simulations: 
 
-1. [`FEA_Results_Homog_MaxAct0.08_VFA_X`](https://drive.google.com/drive/folders/18WdScdh4GIq9YaA5ygX6wx20lC1ZgEqa?usp=sharing) -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in X direction (microbundle length)
+1. `FEA_Results_Homog_MaxAct0.08_VFA_X` -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in X direction (microbundle length)
 
-2. [`FEA_Results_Homog_MaxAct0.08_VFA_Z`](https://drive.google.com/drive/folders/1FobFgv8s0IjGSRAax_m2sTKDNFiD8kCI?usp=sharing) -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in Z direction (microbundle depth) 
+2. `FEA_Results_Homog_MaxAct0.08_VFA_Z` -- Homogeneous activation across the whole microbundle domain with the fiber direction varying linearly in Z direction (microbundle depth) 
 
-3. [`FEA_Results_Heterog_MaxAct0.08_VFA_X`](https://drive.google.com/drive/folders/1004hc0bogykYXMqm70VJd2l86QVufLD4?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inclusion in the middle with the fiber direction varying linearly in X direction (microbundle length)
+3. `FEA_Results_Heterog_MaxAct0.08_VFA_X` -- Heterogeneous activation where the active microbundle domain has a passive inclusion in the middle with the fiber direction varying linearly in X direction (microbundle length)
 
-4. [`FEA_Results_Heterog_MaxAct0.08_VFA_Z`](https://drive.google.com/drive/folders/1OhL6X4cpTSrMWCU8bARD9L-BdnRkvcqc?usp=sharing) -- Heterogeneous activation where the active microbundle domain has a passive inclusion in the middle with the fiber direction varying linearly in Z direction (microbundle depth) 
+4. `FEA_Results_Heterog_MaxAct0.08_VFA_Z` -- Heterogeneous activation where the active microbundle domain has a passive inclusion in the middle with the fiber direction varying linearly in Z direction (microbundle depth) 
 
 Each of these 4 folders contains 9 `.txt` result files, 3 for the mesh cell center positions in the X, Y, and Z directions, and 6 for the Green-Lagrange strain results $E_{xx}$, $E_{xy}$, $E_{xz}$, $E_{yy}$, $E_{yz}$, $E_{zz}$. Each of these text files contains a `number of points x number of steps` array. In other words, each column represents the results at the corresponding simulation step. We briefly note here that all FE simulations were run for 200 steps, simulating 8 complete microbundle beats. 
 
-The dataset can be accessed [`here`](https://drive.google.com/drive/folders/1bomqRqcy550tiXtsZ4Om9pYwl1iOco7e?usp=sharing). Each `.tif` file is approximatley 105 MB in size. The table below summarizes the conditions for generating the 60 different synthetic microbundles.
+The dataset is stored in the `Synthetic_Data` folder [`here`](10.5281/zenodo.12008741). Each `.tif` file is approximatley 105 MB in size. The table below summarizes the conditions for generating the 60 different synthetic microbundles.
 
 | File Name                | Texture Source | Frame     | FEA data                       |
 | -------------------------| -------------- | --------- | -----------------------------  |
